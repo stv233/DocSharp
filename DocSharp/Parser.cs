@@ -263,7 +263,7 @@ namespace DocSharp {
                             else if (type.Equals(_namespace)) kind = Element.Namespaces;
                             else if (type.Equals(_enum)) kind = Element.Enums;
                             else if (type.Equals(_struct)) kind = Element.Structs;
-                            else if (lambda >= 0) kind = cutout.Contains('(') ? Element.Functions : Element.Properties;
+                            else if (lambda >= 0) kind = cutout.Contains('(') ? Element.Methods : Element.Properties;
 
                             // Extension
                             string extends = string.Empty;
@@ -308,7 +308,7 @@ namespace DocSharp {
                                 if (block) {
                                     node = newNode;
                                     if (kind == Element.Variables) {
-                                        kind = cutout.IndexOf('(') != -1 ? Element.Functions : Element.Properties;
+                                        kind = cutout.IndexOf('(') != -1 ? Element.Methods : Element.Properties;
                                         lastRemovableDepth = depth;
                                         inRemovableBlock = true;
                                     }

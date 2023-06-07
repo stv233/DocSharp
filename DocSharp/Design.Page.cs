@@ -74,10 +74,10 @@
 ." + evenRowClass + @" { background-color: #EEEEEE; }
 ." + menuTdClass + @" { width: 250px; }
 ." + firstColumnClass + @" { width: 350px; }
-a:link { color: red; text-decoration: none; }
-a:visited { color: red; text-decoration: none; }
-a:active { color: red; text-decoration: underline; }
-a:hover { color: red; text-decoration: underline; }
+a:link { color: blue; text-decoration: none; }
+a:visited { color: blue; text-decoration: none; }
+a:active { color: blue; text-decoration: underline; }
+a:hover { color: blue; text-decoration: underline; }
 h1 {
   font-size: 24px;
   margin: 0;
@@ -104,6 +104,9 @@ table {
 table tr td {
   text-align: left;
   vertical-align: top;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 10px 15px;
 }
 @media only screen and (max-width: 500px) {
   .t1 {

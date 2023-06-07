@@ -96,7 +96,7 @@ namespace DocSharp {
                 export.summary = Utils.GetTag(node.summary, "summary", node);
                 export.returns = Utils.GetTag(node.summary, "returns", node);
             }
-            if (node.name == null || node.Kind < Element.Functions)
+            if (node.name == null || node.Kind < Element.Methods)
                 ++exportables;
             foreach (MemberNode child in node.Nodes)
                 if (child.Tag == null || node.exportable)

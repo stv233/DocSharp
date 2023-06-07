@@ -13,7 +13,7 @@ namespace DocSharp {
     /// <summary>
     /// Code element kinds.
     /// </summary>
-    enum Element { Namespaces, Classes, Interfaces, Enums, Structs, Functions, Properties, Variables }
+    enum Element { Namespaces, Classes, Interfaces, Enums, Structs, Methods, Properties, Variables }
     /// <summary>
     /// Code element visibilities.
     /// </summary>
@@ -137,7 +137,7 @@ namespace DocSharp {
         /// <param name="to">Target code element</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string LocalLink(MemberNode to) {
-            return new StringBuilder(to.Name).Append(to.Kind < Element.Functions ? "\\index." : ".")
+            return new StringBuilder(to.Name).Append(to.Kind < Element.Methods ? "\\index." : ".")
                 .Append(Design.extension).ToString();
         }
 

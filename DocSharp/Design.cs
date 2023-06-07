@@ -35,7 +35,7 @@ namespace DocSharp {
                 exporter.Ping(node);
             foreach (MemberNode child in node.Nodes) {
                 if (child.exportable) {
-                    if (child.Kind >= Element.Functions)
+                    if (child.Kind >= Element.Methods)
                         GeneratePage(path + '\\' + child.Name + '.' + extension, child, depth);
                     else
                         GenerateDocumentation(child, path + '\\' + child.Name, depth + 1);
